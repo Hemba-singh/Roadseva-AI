@@ -1,0 +1,31 @@
+{
+  "id": "/",
+  "name": "RoadSeva AI — Manipur Road Damage Detection",
+  "short_name": "RoadSeva",
+  "description": "AI-powered road damage reporting and detection platform for Manipur.",
+  "theme_color": "#007AFF",
+  "background_color": "#F5F5F7",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

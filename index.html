@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>RoadSeva AI — Manipur Road Damage Detection & Civic Action</title>
+    <meta name="description" content="AI-powered civic technology platform for Manipur enabling citizens to report road damage with photographs and GPS, and PWD officials to inspect, prioritize, and track resolutions." />
+    <meta property="og:title" content="RoadSeva AI — Manipur Road Damage Detection & Civic Action" />
+    <meta property="og:description" content="AI-powered civic technology platform for Manipur enabling citizens to report road damage with photographs and GPS, and PWD officials to inspect, prioritize, and track resolutions." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- PWA & Apple Mobile Web App Configuration -->
+    <meta name="theme-color" content="#007AFF" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="RoadSeva" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Suppress harmless Vite HMR WebSocket connection errors in preview container per environment constraints -->
+    <script>
+      (function() {
+        var suppress = function(e) {
+          var msg = (e && (e.message || (e.reason && e.reason.message) || String(e.reason || ''))) || '';
+          if (msg.indexOf('WebSocket') !== -1 || msg.indexOf('vite') !== -1 || msg.indexOf('createWebSocketModuleRunnerTransport') !== -1 || (e && e.filename && e.filename.indexOf('@vite/client') !== -1)) {
+            if (e.preventDefault) e.preventDefault();
+            if (e.stopPropagation) e.stopPropagation();
+            if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+            return true;
+          }
+        };
+        window.addEventListener('error', suppress, true);
+        window.addEventListener('unhandledrejection', suppress, true);
+
+        // Filter console.error for WebSocket transport errors
+        if (typeof console !== 'undefined' && console.error) {
+          var origError = console.error;
+          console.error = function() {
+            var str = '';
+            for (var i = 0; i < arguments.length; i++) {
+              str += ' ' + String(arguments[i] && arguments[i].message ? arguments[i].message : arguments[i]);
+            }
+            if (str.indexOf('WebSocket') !== -1 || str.indexOf('createWebSocketModuleRunnerTransport') !== -1 || str.indexOf('@vite/client') !== -1) {
+              return;
+            }
+            return origError.apply(console, arguments);
+          };
+        }
+      })();
+    </script>
+    
+    <!-- Leaflet OpenStreetMap CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  </head>
+  <body class="bg-[#F5F5F7] text-[#1D1D1F] antialiased selection:bg-blue-100 selection:text-blue-900 min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

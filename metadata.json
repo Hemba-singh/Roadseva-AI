@@ -1,0 +1,6 @@
+{
+  "name": "RoadSeva AI — Manipur Road Damage Detection & Civic Action",
+  "description": "AI-powered civic technology platform for Manipur enabling citizens to report road damage with photographs and GPS, and PWD officials to inspect, prioritize, and track resolutions.",
+  "requestFramePermissions": ["geolocation", "camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
